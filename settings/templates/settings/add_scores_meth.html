@@ -1,0 +1,38 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Scores {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/add_cr.css' %}">
+    <link rel="stylesheet" href="{% static 'settings/css/add_scores_meth.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <h1> Добавление оценок для методологии {{meth}} </h1>
+    <form method="post"> 
+        {% csrf_token %}
+        <div class="container"> 
+            {% for opt in options %}
+                <div class="option">
+                    {% for el in opt %}
+                        {% if el.score == None %}
+                            <h1>{{el}}</h1>
+                        {% else %}
+                            <div class="form">
+                                {{el.score}}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <span>{{error}}</span>
+        </div>
+        <input class="btn" type="submit" value="Сохранить" /> 
+    </form>
+</div>
+
+{% endblock %}

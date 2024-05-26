@@ -1,0 +1,53 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Results {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'model/css/results.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1> Наиболее подходящая методология для вашего проекта</h1>
+    <div class="main_res">
+        <div class="name"> 
+            <h1>{{winner}}</h1>
+            {% if winner == "Waterfall" %}
+                <img class="img" src="{% static 'model/img/waterfall2.svg' %}">
+            {% endif %}
+            {% if winner == "Scrum"%}
+                <img class="img" src="{% static 'model/img/scrum2.svg' %}">
+            {% endif %}
+            {% if winner == "Kanban"%}
+                <img class="img" src="{% static 'model/img/kanban.svg' %}">
+            {% endif %}
+            
+        </div>
+        <table border="1" class="dataframe">
+            <tbody>
+                <tr>
+                    <th>Distance to ideal</th>
+                    <td>{{ideal}}</td>
+                </tr>
+                <tr>
+                    <th>Distance to negative</th>
+                    <td>{{negative}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="all_res">
+        {{ table|safe }}
+    </div>
+
+    <div>
+        <form action="{% url 'model:model_home' %}">
+            <button class="btn" type="submit">Начать заново</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

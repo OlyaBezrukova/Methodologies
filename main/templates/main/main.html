@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %} Main {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+
+    <div class="hero">
+        <div class="hero--info">
+            <h1>Выбор методологии: <h2>важный шаг на пути к успеху проекта</h2></h1>
+            <p>Сервис помогает определить методологию по описанию вашего проекта</p>
+            <form action="{% url 'model:model_home' %}">
+                <button class="btn">Начать</button>
+            </form>
+        </div>
+        <img src="{% static 'main/img/main_img.svg' %}">
+    </div>
+    
+{% endblock %}

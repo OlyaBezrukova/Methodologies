@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.priorities {
+    display: block;
+    color: #7286D3;
+    -webkit-text-stroke: 1px #7286D3;
+}
+
+.option {
+    margin-left: 5%;
+    justify-content: center;
+    background-color: none;
+}
+
+.priorities table tr {
+    text-align: center;
+}
+
+.priorities table tr td {
+    padding: 5px;
+}
+
+.priorities table tr th {
+    padding: 5px;
+    background-color: #7285d316;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    color: #7286D3;
+}
+
+.description_form {
+    text-align: center;
+}
+
+.hero form .btn {
+    margin: 20px 45%; 
+    background-color: #F6C04C;
+    padding: 4px 20px;
+    border-radius: 13px;
+
+    transition: all 500ms ease;
+
+    color: white;
+
+    font-size: 25px;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 1px #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000045;
+}
+
+.hero form .btn:hover {
+    background-color: #f2ac16;
+    transform: scale(1.1);
+}

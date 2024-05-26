@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 90%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+    font-family: "Montserrat";
+}
+
+.option {
+    display: block; 
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.option h1 {
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(114, 160, 239, 0.150);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+.score_form {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.hero form .btn {
+    margin: 20px 40%; 
+    background-color: #F6C04C;
+    padding: 4px 20px;
+    border-radius: 13px;
+
+    transition: all 500ms ease;
+
+    color: white;
+
+    font-size: 25px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 1px #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000045;
+}
+
+.hero form .btn:hover {
+    background-color: #f2ac16;
+    transform: scale(1.1);
+}

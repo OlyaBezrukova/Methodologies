@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
+    padding-top: 280px;
+    padding-left: 100px;
+    position: relative;
+}
+
+.hero img {
+    position: absolute;
+    left: 70px;
+    top: -50px;
+}
+
+
+.hero--info {
+    width: 650px;
+}
+
+
+.hero--info h1 {
+    font-size: 40px;
+    font-weight: 550;
+    font-style: italic;
+    color: #7286D3;
+    -webkit-text-stroke: 1px #7286D3;
+    padding-bottom: 15px;
+}
+
+
+.hero--info .btn_loc {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 80%;
+}
+
+.hero--info .btn_loc .btn {
+    background-color: #F6C04C;
+    padding: 7px 90px;
+    border-radius: 13px;
+
+    transition: all 500ms ease;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 1px #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000045;
+}
+
+.hero--info .btn:hover {
+    background-color: #f2ac16;
+    transform: scale(1.1);
+}
+
+
+.hero--info .inputs {
+    margin: 20px;
+    width: 1350px;
+    padding-bottom: 40px;
+    border: solid #778CD7 1px;
+    box-shadow: 0px 4px 4px 0px #00000045;
+
+}
+
+.hero--info legend {
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #7286D3;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.form_radio_btn {
+	display: flexbox;
+	margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.form_radio_btn input[type=radio] {
+	display: none;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    color: #7286D3;
+}
+
+
+.form_radio_btn label {
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    color: #7286D3;
+    display: inline-flex;
+    height: 70px;
+    width: 95%;
+
+    align-items: center; 
+    justify-content: center;
+
+	cursor: pointer;
+	padding: 0 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+
+    background-color: #c2cbfc81;
+}
+ 
+.form_radio_btn input[type=radio]:checked + label {
+	background: #C2CBFC;
+}
+
+.form_radio_btn label:hover {
+	background: rgb(255, 225, 161);
+    transition: all 200ms ease;
+}
+
+.hero--info span {
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    color: #7286D3;
+    -webkit-text-stroke: 1px #7286D3;
+    padding-bottom: 40px;
+    padding-left: 20%;
+}
+

@@ -1,0 +1,56 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Priority {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/add_cr.css' %}">
+    <link rel="stylesheet" href="{% static 'settings/css/priorities.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <h1>{{title}}</h1>
+    <form method="post">
+        <div class="option"> 
+            {% csrf_token %}
+            <div class="priorities">
+                <table>
+                    <tr>
+                        <th>Первый критерий</th>
+                        <th>Второй критерий</th>
+                        <th>Приоритет первого над вторым</th>
+                    </tr>
+                    {% if forms == None %}
+                        {% for crit in criterias %}
+                            <tr>
+                                <td>{{new}}</td>
+                                <td>{{form.priority}}</td>
+                                <td>{{crit}}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        {% for form in forms %}
+                            <tr>
+                                {% for el in form %}
+                                
+                                    {% if el.priority == None %}
+                                        <td>{{el}}</td>
+                                    {% else %}
+                                        <td>{{el.priority}}</td>
+                                    {% endif %}
+                                {% endfor %} 
+                            </tr>
+                        {% endfor %}   
+                    {% endif %}
+                </table>
+            </div>
+            <span>{{error}}</span>
+    
+        </div>
+        <input class="btn" type="submit" value="Сохранить" /> 
+    </form>	
+</div>
+{% endblock %}

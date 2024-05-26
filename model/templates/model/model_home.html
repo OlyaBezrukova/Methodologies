@@ -1,0 +1,41 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Model {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'model/css/model_main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+
+    <div class="hero">
+        <img src="{% static 'model/img/icon.svg' %}" alt="">
+        <div class="hero--info">
+            <h1> Опишите ваш проект </h1>
+            <span>{{error}}</span>
+            <form method="post">
+                {% csrf_token %}
+                {% for el in data %}
+                    {% for key, value in el.items %}
+                        <fieldset class="inputs">
+                            <legend>{{key}}</legend>
+                            {% for val in value %}
+                                <div class="form_radio_btn">
+                                    <input type="radio" id="{{val}}" name="{{key}}" value="{{val}}">
+                                    <label for="{{val}}">{{val}}</label>
+                                </div>
+                            {% endfor %}
+                        </fieldset>
+                    {% endfor %}   
+                {% endfor %}
+                <div class="btn_loc">
+                    <button class="btn" type="submit"> Готово! </button>
+                </div>
+            </form>  
+        </div>
+    
+    </div>
+    
+{% endblock %}

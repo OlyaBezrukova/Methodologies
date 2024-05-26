@@ -1,0 +1,70 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Scores {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/add_cr.css' %}">
+    <link rel="stylesheet" href="{% static 'settings/css/scores.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <h1> Добавление оценок методологий </h1>
+    <form method="post"> 
+        {% csrf_token %}
+        <div class="container"> 
+            <div class="option">
+                <h1>{{option1}}</h1>
+                <table>
+                    <tr>
+                        <th>Методология</th>
+                        <th>Оценка</th>
+                    </tr>
+                    {% for meth in meths%}
+                    <tr>
+                        <td>{{meth}}</td>
+                        <td>{{form.score}}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            <div class="option">
+                <h1>{{option2}}</h1>
+                <table>
+                    <tr>
+                        <th>Методология</th>
+                        <th>Оценка</th>
+                    </tr>
+                    {% for meth in meths%}
+                    <tr>
+                        <td>{{meth}}</td>
+                        <td>{{form.score}}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            <div class="option">
+                <h1>{{option3}}</h1>	
+                <table>
+                    <tr>
+                        <th>Методология</th>
+                        <th>Оценка</th>
+                    </tr>
+                    {% for meth in meths%}
+                    <tr>
+                        <td>{{meth}}</td>
+                        <td>{{form.score}}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            <span>{{error}}</span>
+        </div>
+        <input class="btn" type="submit" value="Сохранить" /> 
+    </form>
+</div>
+
+{% endblock %}

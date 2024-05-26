@@ -1,0 +1,1 @@
+[{"model": "model.methodologies", "pk": 1, "fields": {"name": "Waterfall", "access": [1]}}, {"model": "model.methodologies", "pk": 2, "fields": {"name": "RUP", "access": [1]}}, {"model": "model.methodologies", "pk": 3, "fields": {"name": "Scrum", "access": [1]}}, {"model": "model.methodologies", "pk": 4, "fields": {"name": "Kanban", "access": [1]}}]

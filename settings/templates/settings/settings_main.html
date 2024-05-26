@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Settings {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/settings_main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+    <script src="https://kit.fontawesome.com/b1a98a4eca.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <!-- <h1 class="describe"></h1> -->
+    <div class="container">
+        <div class="option">
+            <!-- <div class="title">
+                <h1>Методологии</h1>
+            </div> -->
+            <li class="btn"><a href="{% url 'settings:add_meth' %}">+ Добавить</a></li>
+            <table>
+                <tr>
+                    <th> Методология </th>
+                    <th> Редактировать </th>
+                    <th> Удалить </th>
+                </tr>
+                {% for meth in meths%}
+                    <tr>
+                        <td>{{meth.name}}</td>
+                        <td><li><a href="{% url 'settings:meth_update' meth.pk %}"><i class="fa-regular fa-pen-to-square"></i></a></li> </td>
+                        <td><li><a href="{% url 'settings:meth_delete' meth.pk %}"><i class="fa-solid fa-trash"></i></a></li> </td>
+                    </tr>
+                {% endfor %}
+                        
+            </table>
+        </div>
+
+        <div class="option">
+            <!-- <div class="title">
+                <h1>Критерии</h1>
+            </div> -->
+            <li class="btn"><a href="{% url 'settings:add_crit' %}">+ Добавить</a></li>
+            <table>
+                <tr>
+                    <th> Критерий </th>
+                    <th> Редактировать </th>
+                    <th> Изменить <br/> вес </th>
+                    <th> Удалить </th>
+                </tr>
+                {% for criteria in criterias%}
+                    <tr>
+                        <td>{{criteria.name}}</td>
+                        <td><li><a href="{% url 'settings:crit_update' criteria.pk %}"><i class="fa-regular fa-pen-to-square"></i></a></li> </td>
+                        <td><li><a href="{% url 'settings:update_weights' criteria.pk %}"><i class="fa-solid fa-sliders"></i></a></li></td>
+                        <td> <li><a href="{% url 'settings:crit_delete' criteria.pk %}"><i class="fa-solid fa-trash"></i></a></li> </td>
+                    </tr>
+                {% endfor %}             
+            </table>
+        </div>
+        <div class="option">
+            <li class="btn"><a href="{% url 'settings:return_base' %}">Восстановить</a></li>
+        </div>
+    </div>
+        
+</div>
+
+{% endblock %}

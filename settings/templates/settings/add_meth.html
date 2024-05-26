@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Methodologies {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/add_meth.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <h1>{{title}}</h1>
+    <form class="container" method="post"> 
+        {% csrf_token %}
+        <div class="option">
+            <h1>Методология:</h1>
+            {{form.name}}
+        </div>
+
+        <input class="btn" type="submit" value="{{btn}}" /> 
+    </form>
+</div>
+    
+
+{% endblock %}

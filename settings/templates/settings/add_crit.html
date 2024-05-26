@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Criterias {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings/css/add_cr.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+{% endblock %}
+
+{% block content %} 
+<div class="hero">
+    <img src="{% static 'settings/img/icon.svg' %}" alt="">
+    <h1>{{title}}</h1>
+    <form class="container" method="post"> 
+        {% csrf_token %}
+        <div class="option">
+            <h2>Критерий</h2>
+            {% if crit_form.name == None %}	
+                {{form.name}}
+            {% else %}
+                {{crit_form.name}}
+            {% endif %}
+        </div>
+
+        <div class="crit_options">
+            <h2>{{title2}}</h2>
+            {% if opt_form.description == None %}	
+                {{option1.description}}
+                {{option2.description}}
+                {{option3.description}}
+            {% else %}
+                {{opt_form.description}}
+                {{opt_form.description}}
+                {{opt_form.description}}
+            {% endif %}
+
+        </div>
+        <span>{{error}}</span>
+
+        <input class="btn" type="submit" value="{{btn}}" /> 
+    </form>
+</div>
+{% endblock %}

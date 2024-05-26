@@ -1,0 +1,60 @@
+.container {
+    width: 90%;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.option {
+    display: block;    
+}
+
+.option h1 {
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(114, 160, 239, 0.150);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.option table tr {
+    text-align: center;
+}
+
+.option table tr td {
+    padding: 5px;
+}
+
+.score_form {
+    width: 150px;
+    text-align: center;
+}
+
+.meth_form {
+    background-color: rgba(225, 230, 254, 0.1);
+    border: none;
+    text-align: center;
+}
+
+.hero form .btn {
+    margin: 20px 40%; 
+    background-color: #F6C04C;
+    padding: 4px 20px;
+    border-radius: 13px;
+
+    transition: all 500ms ease;
+
+    color: white;
+
+    font-size: 25px;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 1px #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000045;
+}
+
+.hero form .btn:hover {
+    background-color: #f2ac16;
+    transform: scale(1.1);
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hero {
+    font-family: "Montserrat";
+    padding: 250px 30px;
+    margin: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.describe, .container  {
+    color: #7286D3;
+    -webkit-text-stroke: 1px #7286D3;
+}
+
+.hero h1 {
+    padding: 25px 100px;
+    color: #7286D3;
+    font-size: 35px;
+}
+
+.hero h2 {
+    padding: 25px 25px;
+    color: #7286D3;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero img {
+    position: absolute;
+    left: 70px;
+    top: -50px;
+}
+
+.container {
+    padding-left: 20px;   
+}
+
+.option, .crit_options {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(225, 230, 254, 0.253);
+    width: 90%;
+    box-shadow: 0px 4px 4px 0px #00000025;
+    display: inline-flex;
+}
+
+.container h1 {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+
+.option .crit_form {
+    width: 500px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    color: #7286D3;
+}
+
+.crit_options {
+    display: block;
+}
+
+.crit_options .opt_form {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px;
+    font-size: 25px;
+    color: #7286D3;
+}
+
+.container .btn {
+    margin: 20px 40%; 
+    background-color: #F6C04C;
+    padding: 4px 20px;
+    border-radius: 13px;
+
+    transition: all 500ms ease;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 1px #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000045;
+}
+
+.container .btn:hover {
+    background-color: #f2ac16;
+    transform: scale(1.1);
+}
